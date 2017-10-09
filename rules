@@ -5,7 +5,3 @@ export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
 %:
 	dh $@
-
-override_dh_clean:
-	dh_clean
-	rm -f protobuf-c-text/Makefile protobuf-c-text/Makefile.in protobuf-c-text/build-aux/compile protobuf-c-text/build-aux/config.h protobuf-c-text/build-aux/config.h.in protobuf-c-text/build-aux/depcomp protobuf-c-text/build-aux/install-sh protobuf-c-text/build-aux/ltmain.sh protobuf-c-text/build-aux/missing protobuf-c-text/build-aux/stamp-h1 protobuf-c-text/build-aux/test-driver protobuf-c-text/config.log protobuf-c-text/config.status protobuf-c-text/configure protobuf-c-text/libtool protobuf-c-text/m4/libtool.m4 protobuf-c-text/m4/ltoptions.m4 protobuf-c-text/m4/ltsugar.m4 protobuf-c-text/m4/ltversion.m4 protobuf-c-text/m4/lt~obsolete.m4 protobuf-c-text/aclocal.m4 protobuf-c-text/protobuf-c-text/.dirstamp

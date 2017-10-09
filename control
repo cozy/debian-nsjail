@@ -4,13 +4,12 @@ Priority: optional
 Maintainer: aeris <aeris@imirhil.fr>
 Build-Depends: debhelper (>= 9), git-core,
 				libc6-dev, pkg-config, make, bison, flex,
-				libcap-dev, protobuf-c-compiler, libprotobuf-c-dev, re2c, check
-Standards-Version: 3.9.8
+				libcap-dev, protobuf-compiler, libprotobuf-dev
+Standards-Version: 4.1.1.1
 Homepage: http://nsjail.com/
-#Vcs-Git: https://anonscm.debian.org/collab-maint/coz-nsjail.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/cozy-nsjail.git
 
 Package: cozy-nsjail
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: nsjail
 Description: A light-weight process isolation tool, making use of Linux namespaces

@@ -1,18 +1,12 @@
 --- a/Makefile
 +++ b/Makefile
-@@ -102,15 +102,9 @@
- 	$(CC) -o $(BIN) $(OBJS) $(LIBS) $(LDFLAGS)
- 
+@@ -71,9 +71,6 @@
+ 	$(CXX) -o $(BIN) $(OBJS) $(LIBS) $(LDFLAGS)
+
  kafel/libkafel.a:
 -ifeq ("$(wildcard kafel/Makefile)","")
 -	git submodule update --init
 -endif
  	$(MAKE) -C kafel
- 
- protobuf-c-text/protobuf-c-text/.libs/libprotobuf-c-text.a:
--ifeq ("$(wildcard protobuf-c-text/configure)","")
--	git submodule update --init
--endif
- ifeq ("$(wildcard protobuf-c-text/Makefile)","")
- 	sh -c "cd protobuf-c-text; CFLAGS=\"-fPIC -I/usr/include/google $(EXTRA_CFLAGS)\" ./autogen.sh --enable-shared=no --disable-doxygen-doc;"
- endif
+
+ $(SRCS_PB_O): $(SRCS_PB_CXX) $(SRCS_PB_H)
