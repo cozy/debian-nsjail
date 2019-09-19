@@ -1,0 +1,14 @@
+--- a/Makefile
++++ b/Makefile
+@@ -31,9 +31,9 @@
+ 	-Wall -Wextra -Werror \
+ 	-Ikafel/include
+ 
+-CXXFLAGS += $(COMMON_FLAGS) $(shell pkg-config --cflags protobuf) \
++CXXFLAGS += $(COMMON_FLAGS) $(shell pkg-config --cflags protobuf) $(shell pkg-config --flags libnl-route-3.0) \
+ 	-std=c++11 -fno-exceptions -Wno-unused -Wno-unused-parameter
+-LDFLAGS += -pie -Wl,-z,noexecstack -lpthread $(shell pkg-config --libs protobuf)
++LDFLAGS += -pie -Wl,-z,noexecstack -lpthread $(shell pkg-config --libs protobuf) $(shell pkg-config --libs libnl-route-3.0)
+ 
+ BIN = nsjail
+ LIBS = kafel/libkafel.a

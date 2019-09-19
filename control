@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: aeris <aeris@imirhil.fr>
 Build-Depends: debhelper (>= 9), git-core,
 				libc6-dev, pkg-config, make, bison, flex,
-				libcap-dev, protobuf-compiler, libprotobuf-dev
+				libcap-dev, protobuf-compiler, libprotobuf-dev, libnl-route-3-dev
 Standards-Version: 4.1.1.1
 Homepage: http://nsjail.com/
 

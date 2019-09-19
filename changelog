@@ -1,4 +1,10 @@
-nsjail (1.8-1) UNRELEASED; urgency=medium
+nsjail (2.9-1) unstable; urgency=medium
+
+  * New upstream release v2.9 
+
+ -- aeris <aeris@cozycloud.cc>  Thu, 19 Sep 2019 11:43:57 +0200
+
+nsjail (1.8-1) unstable; urgency=medium
 
   * New upstream release v1.8.
 

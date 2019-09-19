@@ -1,12 +1,12 @@
 --- a/Makefile
 +++ b/Makefile
-@@ -71,9 +71,6 @@
+@@ -70,9 +70,6 @@
  	$(CXX) -o $(BIN) $(OBJS) $(LIBS) $(LDFLAGS)
-
+ 
  kafel/libkafel.a:
 -ifeq ("$(wildcard kafel/Makefile)","")
 -	git submodule update --init
 -endif
  	$(MAKE) -C kafel
-
- $(SRCS_PB_O): $(SRCS_PB_CXX) $(SRCS_PB_H)
+ 
+ # Sequence of proto deps, which doesn't fit automatic make rules
