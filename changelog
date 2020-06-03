@@ -1,3 +1,9 @@
+nsjail (2.9-2) unstable; urgency=medium
+
+  * Fix warning on deprecated calls, generating error during build
+
+ -- aeris <aeris@cozycloud.cc>  Wed, 03 Jun 2020 15:26:55 +0200
+
 nsjail (2.9-1) unstable; urgency=medium
 
   * New upstream release v2.9 

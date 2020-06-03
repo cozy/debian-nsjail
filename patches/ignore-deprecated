@@ -1,0 +1,18 @@
+Index: nsjail/config.cc
+===================================================================
+--- nsjail.orig/config.cc
++++ nsjail/config.cc
+@@ -82,10 +82,13 @@ static bool configParseInternal(nsjconf_
+ 		LOG_E("Uknown running mode: %d", njc.mode());
+ 		return false;
+ 	}
++	#pragma GCC diagnostic push
++	#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+ 	if (njc.has_chroot_dir()) {
+ 		nsjconf->chroot = njc.chroot_dir();
+ 	}
+ 	nsjconf->is_root_rw = njc.is_root_rw();
++	#pragma GCC diagnostic pop
+ 	nsjconf->hostname = njc.hostname();
+ 	nsjconf->cwd = njc.cwd();
+ 	nsjconf->port = njc.port();
